@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000"
+    tools:context=".CreateAccount">
+
+    <View
+        android:id="@+id/background_pass2"
+        android:layout_width="330dp"
+        android:layout_height="74dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_pass_policy"
+        app:layout_constraintEnd_toEndOf="@+id/et_password_repeat"
+        app:layout_constraintStart_toStartOf="@+id/et_password_repeat"
+        app:layout_constraintTop_toTopOf="@+id/tv_repeat_pass"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <View
+        android:id="@+id/background_email"
+        android:layout_width="331dp"
+        android:layout_height="75dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_create_pass"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toTopOf="@+id/tv_email"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <View
+        android:id="@+id/background_pass1"
+        android:layout_width="325dp"
+        android:layout_height="75dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/background_pass2"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toTopOf="@+id/tv_create_pass"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFFFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/museo_sans_300"
+        android:hint="@string/example_email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_create_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/email_address"
+        android:textColor="#FFFFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <TextView
+        android:id="@+id/tv_create_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/create_password"
+        android:textColor="#FFFFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="314dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFFFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/museo_sans_300"
+        android:hint="@string/see_criteria_below"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#6A808080"
+        app:layout_constraintBottom_toTopOf="@+id/tv_repeat_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_pass1_check"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toTopOf="@+id/background_pass1"
+        app:layout_constraintVertical_bias="0.59000003"
+        app:srcCompat="@drawable/tick" />
+
+    <TextView
+        android:id="@+id/tv_repeat_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/repeat_password"
+        android:textColor="#FFFFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_password_repeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_password_repeat"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/museo_sans_300"
+        android:hint="@string/password_2_hint"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_pass_policy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pass_policy"
+        android:layout_width="337dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/museo_sans_300"
+        android:text="@string/pass_req"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/gradient_button_background"
+        android:clickable="true"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/next"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_email_check"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="28dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/background_pass1"
+        app:layout_constraintEnd_toEndOf="@+id/background_email"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toTopOf="@+id/background_email"
+        app:layout_constraintVertical_bias="0.24"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/iv_email_x"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_email_check"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toTopOf="@+id/et_email"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv_pass1_x"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pass1_check"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="@+id/iv_pass1_check"
+        app:layout_constraintTop_toTopOf="@+id/iv_pass1_check"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv_pass2_x"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="19dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/background_pass2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_pass2_check"
+        app:layout_constraintStart_toStartOf="@+id/iv_pass2_check"
+        app:layout_constraintTop_toTopOf="@+id/background_pass2"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv_pass2_check"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password_repeat"
+        app:layout_constraintEnd_toEndOf="@+id/background_pass2"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/et_password_repeat"
+        app:layout_constraintTop_toTopOf="@+id/background_pass2"
+        app:srcCompat="@drawable/tick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
