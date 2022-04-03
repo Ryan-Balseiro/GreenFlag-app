@@ -4,8 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF000000"
+    android:background="#000000"
     tools:context=".CreateAccount">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="405dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.26" />
 
     <View
         android:id="@+id/background_pass2"
@@ -16,19 +28,19 @@
         app:layout_constraintEnd_toEndOf="@+id/et_password_repeat"
         app:layout_constraintStart_toStartOf="@+id/et_password_repeat"
         app:layout_constraintTop_toTopOf="@+id/tv_repeat_pass"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <View
         android:id="@+id/background_email"
         android:layout_width="331dp"
-        android:layout_height="75dp"
+        android:layout_height="70dp"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/tv_create_pass"
         app:layout_constraintEnd_toEndOf="@+id/et_email"
         app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="@+id/et_email"
         app:layout_constraintTop_toTopOf="@+id/tv_email"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.42000002" />
 
     <View
         android:id="@+id/background_pass1"
@@ -39,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="@+id/et_password"
         app:layout_constraintStart_toStartOf="@+id/et_password"
         app:layout_constraintTop_toTopOf="@+id/tv_create_pass"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <EditText
         android:id="@+id/et_email"
@@ -245,5 +257,35 @@
         app:layout_constraintStart_toStartOf="@+id/et_password_repeat"
         app:layout_constraintTop_toTopOf="@+id/background_pass2"
         app:srcCompat="@drawable/tick" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#0000D900"
+        android:fontFamily="@font/museo_sans_500"
+        android:text="@string/title"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/arrow_back"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47"
+        tools:text=" " />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
