@@ -58,22 +58,6 @@ public class CreateAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-//        //get string from strings.xml
-//        String title = getString(R.string.title);
-//
-//        //create back button
-//        if (getSupportActionBar() != null) {
-//            //call action bar
-//            ActionBar ab = getSupportActionBar();
-//            //customize back button
-//            ab.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_new_24);
-//            //show back button
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//            //set title
-//            ab.setTitle(title);
-//        }
-
         initViews();
 
     }
@@ -206,13 +190,6 @@ public class CreateAccount extends AppCompatActivity {
             return false;
         }
     }
-
-//    //logic for back button
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        onBackPressed();
-//        return true;
-//    }
 
     private void changeBackground (int viewidID, String passFail){
         //passFail: p = pass / f = fail
