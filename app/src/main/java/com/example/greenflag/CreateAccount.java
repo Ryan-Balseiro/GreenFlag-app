@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
@@ -26,6 +27,7 @@ import java.util.regex.Pattern;
 public class CreateAccount extends AppCompatActivity {
 
     private Button btnNext;
+    private Button btnBack;
     private EditText email;
     private EditText password;
     private EditText passwordConfirm;
@@ -64,6 +66,15 @@ public class CreateAccount extends AppCompatActivity {
 
     //initialize views
     private void initViews(){
+        //back button
+        btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         //borders for textViews
         backgroundEmail = findViewById(R.id.background_email);
         backgroundPass1 = findViewById(R.id.background_pass1);
@@ -87,6 +98,7 @@ public class CreateAccount extends AppCompatActivity {
         //button and button listener
         btnNext = findViewById(R.id.btn_next);
         btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v){
                 runCheckManager(v);
             }
@@ -216,7 +228,7 @@ public class CreateAccount extends AppCompatActivity {
         if (viewidID == 2){
             if (passFail == "p"){
                 //background green
-                backgroundPass1.setBackgroundColor(Color.parseColor("#00FF00"));
+                backgroundPass1.setBackgroundColor(Color.parseColor("#59CC00"));
                 pass1Check.setVisibility(View.VISIBLE);
                 pass1X.setVisibility(View.INVISIBLE);
             }
@@ -231,7 +243,7 @@ public class CreateAccount extends AppCompatActivity {
         if (viewidID == 3){
             if (passFail == "p"){
                 //background green
-                backgroundPass2.setBackgroundColor(Color.parseColor("#00FF00"));
+                backgroundPass2.setBackgroundColor(Color.parseColor("#59CC00"));
                 pass2Check.setVisibility(View.VISIBLE);
                 pass2X.setVisibility(View.INVISIBLE);
             }
